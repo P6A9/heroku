@@ -2,6 +2,6 @@ from flask import Flask
 
 app=Flask(__name__)
 
-@app.route("/")
+@app.route("/<string:param>")
 def index():
-	return "hey there!"
+	return "This is what you entered" + param
